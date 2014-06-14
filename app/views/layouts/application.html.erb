@@ -26,7 +26,9 @@
         <li ><%= link_to 'New Idea', new_idea_path %></li>
 
         <% if current_user %>
-        <li ><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>        
+        <li ><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>       
+        <%= image_tag current_user.gravatar_url %>
+</li> 
         <% else %>
         <li ><%= link_to 'Sign in', new_user_session_path %></li>        
         <% end %>
